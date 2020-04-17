@@ -1,0 +1,99 @@
+09:13:18.606 [main] INFO  com.ruoyi.RuoYiApplication - Starting RuoYiApplication on DESKTOP-IIO8FC3 with PID 14812 (G:\jav\java\3838995922584576\RuoYi\target\classes started by jsb010 in G:\jav\java\3838995922584576\RuoYi)
+09:13:18.631 [main] DEBUG com.ruoyi.RuoYiApplication - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+09:13:18.631 [main] INFO  com.ruoyi.RuoYiApplication - The following profiles are active: druid
+09:13:19.200 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+09:13:22.281 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Cache with name 'com.ruoyi.framework.shiro.realm.UserRealm.authorizationCache' does not yet exist.  Creating now.
+09:13:22.285 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Added EhCache named [com.ruoyi.framework.shiro.realm.UserRealm.authorizationCache]
+09:13:23.291 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:13:24.314 [main] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [loginRecordCache]
+09:13:26.681 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+09:13:26.683 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+09:13:26.989 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:13:28.837 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+09:13:28.861 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+09:13:28.861 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.3 created.
+09:13:28.884 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'RuoyiScheduler' with instanceId 'DESKTOP-IIO8FC31566436408839'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+09:13:28.884 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+09:13:28.884 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.3
+09:13:28.888 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a899811
+09:13:29.008 [main] DEBUG com.ruoyi.project.monitor.job.mapper.JobMapper.selectJobAll - ==>  Preparing: SELECT job_id, job_name, job_group, method_name, params, cron_expression, status, create_by, create_time FROM sys_job 
+09:13:29.080 [main] DEBUG com.ruoyi.project.monitor.job.mapper.JobMapper.selectJobAll - ==> Parameters: 
+09:13:29.125 [main] DEBUG com.ruoyi.project.monitor.job.mapper.JobMapper.selectJobAll - <==      Total: 2
+09:13:34.055 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+09:13:36.524 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-66"]
+09:13:36.547 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-66"]
+09:13:36.566 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+09:13:36.619 [main] INFO  com.ruoyi.RuoYiApplication - Started RuoYiApplication in 19.097 seconds (JVM running for 22.19)
+09:13:37.556 [Quartz Scheduler [RuoyiScheduler]] INFO  org.quartz.core.QuartzScheduler - Scheduler RuoyiScheduler_$_DESKTOP-IIO8FC31566436408839 started.
+09:13:57.108 [http-nio-66-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+09:13:57.208 [http-nio-66-exec-1] INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Enabling session validation scheduler...
+09:13:57.208 [http-nio-66-exec-1] DEBUG com.ruoyi.framework.shiro.web.session.SpringSessionValidationScheduler - Scheduling session validation job using Spring Scheduler with session validation interval of [600000]ms...
+09:13:57.211 [http-nio-66-exec-1] DEBUG com.ruoyi.framework.shiro.web.session.SpringSessionValidationScheduler - Session validation job successfully scheduled with Spring Scheduler.
+09:13:57.248 [http-nio-66-exec-1] INFO  org.apache.shiro.cache.ehcache.EhCacheManager - Using existing EHCache named [shiro-activeSessionCache]
+09:13:58.213 [pool-2-thread-1] INFO  com.ruoyi.framework.shiro.web.session.OnlineWebSessionManager - invalidation sessions...
+09:13:58.233 [pool-2-thread-1] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.selectOnlineByExpired - ==>  Preparing: SELECT * FROM sys_user_online o WHERE o.last_access_time <= ? ORDER BY o.last_access_time ASC 
+09:13:58.236 [pool-2-thread-1] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.selectOnlineByExpired - ==> Parameters: 2019-08-22 08:43:58(String)
+09:13:58.247 [pool-2-thread-1] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.selectOnlineByExpired - <==      Total: 0
+09:13:58.248 [pool-2-thread-1] INFO  com.ruoyi.framework.shiro.web.session.OnlineWebSessionManager - Finished invalidation session. No sessions were stopped.
+09:14:04.958 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.selectUserByLoginName - ==>  Preparing: select u.user_id, u.dept_id, u.login_name, u.user_name, u.email, u.phonenumber, u.sex, u.avatar, u.password, u.salt, u.status, u.refuse_des, u.login_ip, u.login_date, u.create_time, d.dept_id, d.parent_id, d.dept_name, d.order_num, d.status as dept_status from sys_user u left join sys_dept d on u.dept_id = d.dept_id left join sys_user_role ur on u.user_id = ur.user_id where u.login_name = ? 
+09:14:04.963 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.selectUserByLoginName - ==> Parameters: admin(String)
+09:14:04.990 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.selectUserByLoginName - <==      Total: 1
+09:14:05.011 [http-nio-66-exec-8] INFO  sys-user - [127.0.0.1][admin][Success][登录成功]
+09:14:05.065 [http-nio-66-exec-8] DEBUG com.ruoyi.project.monitor.logininfor.mapper.LogininforMapper.insertLogininfor - ==>  Preparing: insert into sys_logininfor (login_name, status, ipaddr, browser, os, msg, login_time) values (?, ?, ?, ?, ?, ?, sysdate()) 
+09:14:05.068 [http-nio-66-exec-8] DEBUG com.ruoyi.project.monitor.logininfor.mapper.LogininforMapper.insertLogininfor - ==> Parameters: admin(String), 0(String), 127.0.0.1(String), Chrome 49(String), Windows 10(String), 登录成功(String)
+09:14:05.078 [http-nio-66-exec-8] DEBUG com.ruoyi.project.monitor.logininfor.mapper.LogininforMapper.insertLogininfor - <==    Updates: 1
+09:14:05.116 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.updateUser - ==>  Preparing: update sys_user SET dept_id = ?, login_name = ?, user_name = ?, email = ?, phonenumber = ?, sex = ?, password = ?, salt = ?, status = ?, refuse_des = ?, login_ip = ?, login_date = ?, update_time = sysdate() where 1=1 and user_id = ? 
+09:14:05.121 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.updateUser - ==> Parameters: 106(Long), admin(String), 若依(String), ry@163.com(String), 15888888888(String), 1(String), 29c67a30398638269fe600f73a054934(String), 111111(String), 0(Integer), 正常(String), 127.0.0.1(String), 2019-08-22 09:14:05.079(Timestamp), 1(Long)
+09:14:05.124 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.user.mapper.UserMapper.updateUser - <==    Updates: 1
+09:14:05.214 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenusByUserId - ==>  Preparing: select distinct m.menu_id, m.parent_id, m.menu_name, m.url, m.perms , m.menu_type, m.icon, m.order_num, m.create_time from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? and m.menu_type in ('M', 'C') and m.visible = 0 order by m.order_num 
+09:14:05.217 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenusByUserId - ==> Parameters: 1(Long)
+09:14:05.245 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenusByUserId - <==      Total: 17
+09:14:05.330 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.config.mapper.ConfigMapper.selectConfigByKey - ==>  Preparing: select config_id, config_name, config_key, config_value, config_type, create_by, create_time, update_by, update_time, remark from sys_config where config_key = ? 
+09:14:05.333 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.config.mapper.ConfigMapper.selectConfigByKey - ==> Parameters: sys.index.skinName(String)
+09:14:05.343 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.config.mapper.ConfigMapper.selectConfigByKey - <==      Total: 1
+09:14:05.441 [http-nio-66-exec-9] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.saveOnline - ==>  Preparing: replace into sys_user_online(sessionId, login_name, dept_name, ipaddr, browser, os, status, start_timestsamp, last_access_time, expire_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+09:14:05.518 [http-nio-66-exec-9] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.saveOnline - ==> Parameters: cc0b2de8-34bb-4021-99fd-136a68dcd369(String), admin(String), 研发一部(String), 127.0.0.1(String), Chrome 49(String), Windows 10(String), on_line(String), 2019-08-22 09:13:57.227(Timestamp), 2019-08-22 09:14:05.439(Timestamp), 1800000(Long)
+09:14:05.522 [http-nio-66-exec-9] DEBUG com.ruoyi.project.monitor.online.mapper.UserOnlineMapper.saveOnline - <==    Updates: 1
+09:14:09.076 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRolesByUserId - ==>  Preparing: SELECT r.role_id, r.role_name, r.role_key FROM sys_user u LEFT JOIN sys_user_role ur ON u.user_id = ur.user_id LEFT JOIN sys_role r ON ur.role_id = r.role_id WHERE ur.user_id = ? 
+09:14:09.079 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRolesByUserId - ==> Parameters: 1(Long)
+09:14:09.093 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRolesByUserId - <==      Total: 1
+09:14:09.095 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectPermsByUserId - ==>  Preparing: select distinct m.perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id left join sys_user_role ur on rm.role_id = ur.role_id where ur.user_id = ? 
+09:14:09.097 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectPermsByUserId - ==> Parameters: 1(Long)
+09:14:09.106 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectPermsByUserId - <==      Total: 73
+09:14:10.097 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList_COUNT - ==>  Preparing: SELECT count(0) FROM sys_role 
+09:14:10.099 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList_COUNT - ==> Parameters: 
+09:14:10.101 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList_COUNT - <==      Total: 1
+09:14:10.108 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList - ==>  Preparing: SELECT role_id, role_name, role_key, role_sort, status, create_time, remark FROM sys_role order by role_sort asc LIMIT ? 
+09:14:10.113 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList - ==> Parameters: 10(Integer)
+09:14:10.116 [http-nio-66-exec-8] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleList - <==      Total: 2
+09:14:12.216 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:14:12.244 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - ==> Parameters: 1(Long)
+09:14:12.247 [http-nio-66-exec-5] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - <==      Total: 1
+09:14:12.412 [http-nio-66-exec-5] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg, oper_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, sysdate()) 
+09:14:12.415 [http-nio-66-exec-5] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.ruoyi.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 127.0.0.1(String), {}(String), 0(Integer), null
+09:14:12.427 [http-nio-66-exec-5] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - <==    Updates: 1
+09:14:12.766 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:14:12.769 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - ==> Parameters: 
+09:14:12.803 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - <==      Total: 75
+09:14:12.805 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:14:12.808 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - ==> Parameters: 1(Long)
+09:14:12.812 [http-nio-66-exec-2] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - <==      Total: 75
+09:14:38.135 [http-nio-66-exec-7] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - ==>  Preparing: select role_id, role_name, role_key, role_sort, status, create_time, remark from sys_role u where u.role_id = ? 
+09:14:38.136 [http-nio-66-exec-7] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - ==> Parameters: 1(Long)
+09:14:38.139 [http-nio-66-exec-7] DEBUG com.ruoyi.project.system.role.mapper.RoleMapper.selectRoleById - <==      Total: 1
+09:14:38.141 [http-nio-66-exec-7] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - ==>  Preparing: insert into sys_oper_log(title, action, method, channel, login_name, dept_name, oper_url, oper_ip, oper_param, status, error_msg, oper_time) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, sysdate()) 
+09:14:38.142 [http-nio-66-exec-7] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - ==> Parameters: 系统管理(String), 角色管理-修改角色(String), com.ruoyi.project.system.role.controller.RoleController.edit()(String), web(String), admin(String), 研发一部(String), /system/role/edit/1(String), 127.0.0.1(String), {}(String), 0(Integer), null
+09:14:38.147 [http-nio-66-exec-7] DEBUG com.ruoyi.project.monitor.operlog.mapper.OperLogMapper.insertOperlog - <==    Updates: 1
+09:14:38.623 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - ==>  Preparing: select menu_id, menu_name, parent_id, order_num, url, menu_type, visible, perms, icon, create_by, create_time from sys_menu 
+09:14:38.624 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - ==> Parameters: 
+09:14:38.641 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuAll - <==      Total: 75
+09:14:38.643 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - ==>  Preparing: select concat(m.menu_id, m.perms) as perms from sys_menu m left join sys_role_menu rm on m.menu_id = rm.menu_id where rm.role_id = ? order by m.parent_id, m.order_num 
+09:14:38.644 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - ==> Parameters: 1(Long)
+09:14:38.648 [http-nio-66-exec-3] DEBUG com.ruoyi.project.system.menu.mapper.MenuMapper.selectMenuTree - <==      Total: 75
