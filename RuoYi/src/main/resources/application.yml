@@ -3,7 +3,7 @@ ruoyi:
   name: RuoYi
   version: 1.1.4
   copyrightYear: 2018
-  profile: D:/profile/
+  profile: kb/profile/
 
 #开发环境配置
 server:

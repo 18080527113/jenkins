@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ruoyi.project.system.dict.mapper.DictDataMapper">
 	
-	<resultMap type="DictData" id="DictDataResult">
+	<resultMap type="com.ruoyi.project.system.dict.domain.DictData" id="DictDataResult">
 		<id     property="dictCode"   column="dict_code"   />
 		<result property="dictSort"   column="dict_sort"   />
 		<result property="dictLabel"  column="dict_label"  />
@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="updateTime" column="update_time" />
 	</resultMap>
 
-	<select id="selectDictDataList" parameterType="DictData" resultMap="DictDataResult">
+	<select id="selectDictDataList" resultMap="DictDataResult">
 		select dict_code, dict_sort, dict_label, dict_value, dict_type, status, create_by, create_time, remark from sys_dict_data
 		<where>
 			<if test="searchValue != null and searchValue != ''">
@@ -46,7 +46,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach> 
  	</delete>
  	
-	<update id="updateDictData" parameterType="DictData">
+	<update id="updateDictData" >
  		update sys_dict_data
  		<set>
  			<if test="dictSort != null and dictSort != ''">dict_sort = #{dictSort},</if>
@@ -62,7 +62,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		<if test="dictCode != null and dictCode  != ''">and dict_code = #{dictCode}</if>
 	</update>
  	
- 	<insert id="insertDictData" parameterType="DictData">
+ 	<insert id="insertDictData" >
  		insert into sys_dict_data(
  			<if test="dictSort != null and dictSort != ''">dict_sort,</if>
  			<if test="dictLabel != null and dictLabel != ''">dict_label,</if>
